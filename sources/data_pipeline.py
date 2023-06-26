@@ -7,11 +7,15 @@ import pandas as pd
 import requests
 
 
+def make_request(path: str):
+    return requests.get(path)
+
+
 def get_availablity_bikes():
     # Requêtes API Velib
-    stations_information_response = requests.get('https://velib-metropole-opendata.smoove.pro/opendata'
+    stations_information_response = make_request('https://velib-metropole-opendata.smoove.pro/opendata'
                                                  '/Velib_Metropole/station_information.json')
-    stations_status_response = requests.get('https://velib-metropole-opendata.smoove.pro/opendata/Velib_Metropole'
+    stations_status_response = make_request('https://velib-metropole-opendata.smoove.pro/opendata/Velib_Metropole'
                                             '/station_status.json')
     stations_information = pd.DataFrame(stations_information_response.json()['data']['stations'])
     stations_status = pd.DataFrame(stations_status_response.json()['data']['stations'])
