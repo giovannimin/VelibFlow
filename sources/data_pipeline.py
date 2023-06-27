@@ -57,6 +57,12 @@ def get_availablity_bikes():
     stations['availableMechanicalBikesRate'] = stations['availableMechanicalBikesRate'].fillna(0)
     stations['availableElectricRate'] = stations['availableElectricRate'].fillna(0)
 
+    # Arrondir les KPIs au dixième
+    stations['availableBikesRate'] = stations['availableBikesRate'].round(2)
+    stations['availableDocksRate'] = stations['availableDocksRate'].round(2)
+    stations['availableMechanicalBikesRate'] = stations['availableMechanicalBikesRate'].round(2)
+    stations['availableElectricRate'] = stations['availableElectricRate'].round(2)
+
     return stations
 
 
