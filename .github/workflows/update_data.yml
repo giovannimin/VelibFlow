@@ -1,8 +1,8 @@
 name: auto update-data
 
-on:
-  schedule:
-    - cron:  '*/15 * * * *'
+#on:
+#  schedule:
+#    - cron:  '*/15 * * * *'
 
 jobs:
   update-table:
