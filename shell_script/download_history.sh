@@ -9,7 +9,7 @@ urls=$(
     jq -r '.assets|sort_by(.updated_at)|reverse[]|.browser_download_url'
 )
 
-outfile=stations.zip
+outfile=velib_data.zip
 for url in $urls; do
     curl --location --fail --retry 8 --retry-delay 0 --output "$outfile" "$url" &&
     unzip -o $outfile &&
