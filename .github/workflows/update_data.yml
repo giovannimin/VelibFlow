@@ -1,8 +1,6 @@
 name: auto update-data
 
 on:
-  push:
-    branches: master
   schedule:
     - cron:  '*/15 * * * *'
 
@@ -11,19 +9,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout latest code version from git
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
         with:
           path: ./
 
       - name: Set up Python environement
-        uses: actions/setup-python@master
+        uses: actions/setup-python@v2
         with:
           python-version: 3.9
 
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Fetch data
+      - name: Run fetch data
         run: ./shell_script/update_data.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
