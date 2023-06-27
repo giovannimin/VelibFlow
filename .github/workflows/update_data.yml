@@ -1,6 +1,9 @@
 name: auto update-data
 
-#on:
+on:
+  push:
+    branches:
+      - main
 #  schedule:
 #    - cron:  '*/15 * * * *'
 
