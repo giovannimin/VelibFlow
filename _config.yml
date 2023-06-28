@@ -1,8 +1,8 @@
-remote_theme: kdog3682/jekyll-theme-prologue
+remote_theme: chrisbobbe/jekyll-theme-prologue
 
-title: Mon Site
-description: Site créé avec le thème Jekyll Prologue
-author: Votre Nom
+title: VélibFlow
+description: Description
+author: Giovanni Minghelli
 
 plugins:
   - jekyll-seo-tag
