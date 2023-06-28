@@ -1,0 +1,18 @@
+remote_theme: kdog3682/jekyll-theme-prologue
+
+title: Mon Site
+description: Site créé avec le thème Jekyll Prologue
+author: Votre Nom
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Configuration spécifique au thème Prologue
+prologue:
+  # Options de personnalisation
+  header:
+    background_color: "#333"
+    text_color: "#fff"
+  show_description: true
+  show_author: true
